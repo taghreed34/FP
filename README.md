@@ -1,5 +1,6 @@
 # FP
-
+- After Cloning the repo and going to main branch:
+  
 1- Create a conda environment called FP with python version 3.7.0:
 
     conda create -n FP python==3.7.0
