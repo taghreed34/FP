@@ -11,7 +11,7 @@ if __name__ == '__main__':
               {"type": "top", "size": "s", "brand": "zara","price": 1300, "quantity": 1, "discount": 0}
               ]
     
-    orders_after_discount = calculate_all_orders_discount(orders, get_rules())
+    orders_after_discount = calculate_all_orders_discount(orders, get_rules)
 
     print("Orders after calculating discount: ", orders_after_discount)
     

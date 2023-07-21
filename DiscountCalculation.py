@@ -68,6 +68,6 @@ def calculate_all_orders_discount(orders: List[dict], get_rules_func: FunctionTy
     assert (isinstance(get_rules_func, FunctionType)), "get_rules_func must be a function."
 
 
-    rules = get_rules_func
+    rules = get_rules_func()
 
     return list(map(lambda order: claculate_order_discount(order, rules), orders))
