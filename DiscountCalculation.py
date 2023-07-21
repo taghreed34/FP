@@ -12,6 +12,8 @@ def claculate_order_discount(order: dict, rules: List[namedtuple])-> dict:
     selected_discounts = list(rules | where(lambda x: x.QualifyingCondition(order)) |
                                select(lambda y: y.DiscountRule(order)) |sort | take(3))
     
+    print(selected_discounts)
+    
     final_discount = average(selected_discounts)
 
     new_order = deepcopy(order)
