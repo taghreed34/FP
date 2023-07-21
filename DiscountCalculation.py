@@ -7,7 +7,7 @@ from copy import deepcopy
 from Rules import get_rules
 
 
-def claculate_order_discount(order: dict, rules: List[namedtuple[FunctionType, FunctionType]])-> dict:
+def claculate_order_discount(order: dict, rules: List[namedtuple])-> dict:
 
     selected_discounts = list(rules | where(lambda x: x.QualifyingCondition) | select(lambda y: y.DiscountRule) |
                                sort | take(3))
