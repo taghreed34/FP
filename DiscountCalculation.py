@@ -9,8 +9,8 @@ from Rules import get_rules
 
 def claculate_order_discount(order: dict, rules: List[namedtuple])-> dict:
 
-    selected_discounts = list(rules | where(lambda x: x.QualifyingCondition) | select(lambda y: y.DiscountRule) |
-                               sort | take(3))
+    selected_discounts = list(rules | where(lambda x: x.QualifyingCondition(order)) |
+                               select(lambda y: y.DiscountRule(order)) |sort | take(3))
     
     final_discount = average(selected_discounts)
 
