@@ -45,7 +45,7 @@ def GetQuantityDiscount(order: dict)->float:
 
 def get_rules()->List[namedtuple]:
 
-    DiscountPair = namedtuple("Discount Pair", "QualifyingCondition DiscountRule")
+    DiscountPair = namedtuple("DiscountPair", "QualifyingCondition DiscountRule")
 
     conditions_rules_pairs = [
                               DiscountPair(IsTypeQualified, GetTypeDiscount), 
