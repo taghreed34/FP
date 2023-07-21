@@ -51,7 +51,8 @@ def get_rules()->List[namedtuple]:
                               DiscountPair(IsTypeQualified, GetTypeDiscount), 
                               DiscountPair(IsPriceQualified, GetPriceDiscount),
                               DiscountPair(IsBrandQualified, GetBrandDiscount), 
-                              DiscountPair(IsSizeQualified, GetSizeDiscount)
+                              DiscountPair(IsSizeQualified, GetSizeDiscount),
+                              DiscountPair(IsQuantityQualified, GetQuantityDiscount)
                               ]
     
     return conditions_rules_pairs
